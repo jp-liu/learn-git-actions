@@ -68,7 +68,7 @@ GitHub Actions 使用 YAML 语法定义工作流。每一个工作流保存为�
    on: [push]
    jobs:
     check-bats-version:
-     runs-on: ubuntu-lastest
+     runs-on: ubuntu-latest
      steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -85,3 +85,6 @@ GitHub Actions 使用 YAML 语法定义工作流。每一个工作流保存为�
 ![Actions](https://user-images.githubusercontent.com/79979500/183047081-a311951a-6d05-4dba-ad79-fa5506b88c4e.png)
 
 我们来提交一次，看看运行状态和历史
+
+![Status](https://user-images.githubusercontent.com/79979500/183048163-635c2c23-121e-4957-95be-48976c1b03f8.png)
+
