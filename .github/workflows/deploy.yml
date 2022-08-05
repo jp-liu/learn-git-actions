@@ -7,13 +7,19 @@ jobs:
   deploy-docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v2 # 检出仓库代码到运行器
+      - uses: actions/setup-node@v2 # 安装 node 环境
         with:
-          node-version: 14
+          node-version: 14 # node -v:14
+      - name: install pnpm
+        run: npm i pnpm@latest -g
+      - name: install dependencies
+        run: | 
+          npm install
+          npm run build
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           branch: gh-pages-deploy
-          folder: ./docs/.vitepress/dist
+          folder: docs/.vitepress/dist
