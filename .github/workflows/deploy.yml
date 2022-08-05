@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - 'main'
+    paths:
+      - '**.js'
+      - '**.md'
 jobs:
   deploy-docs:
     runs-on: ubuntu-latest
@@ -15,8 +18,8 @@ jobs:
         run: npm i pnpm@latest -g
       - name: install dependencies
         run: | 
-          npm install
-          npm run build
+          pnpm install
+          pnpm run build
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
