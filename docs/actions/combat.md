@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 14 # node -v:14
       - name: install dependencies
-        run: | 
+        run: |
           npm install
           npm run build
       - name: Build and Deploy
@@ -73,8 +73,6 @@ OK，接下来我们提交试试看
 
 4. 好了我们的凭证拿到了，可以去粘贴到我们创建的凭证窗口中了。这样就可以让完成上传了
 
-
-
 ## GitHub Pages
 
 上面的操作完成之后，我们就可以去开启我们自己的静态站点了。
@@ -83,7 +81,7 @@ OK，接下来我们提交试试看
 
 ![GitHub Pages](https://user-images.githubusercontent.com/79979500/183097188-8def602a-a3ad-4132-af47-25c9466ea5ae.png)
 
-完成之后，就可以通过上面的地址访问了，我这里是 **https://jp-liu.github.io/learn-git-actions/**
+完成之后，就可以通过上面的地址访问了，我这里是 **<https://jp-liu.github.io/learn-git-actions/>**
 
 访问一下
 
@@ -102,6 +100,3 @@ export default defineConfig({
 ```
 
 接下来提交，就会自动部署了，我们提交一下再访问
-
-
-
